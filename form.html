@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- description -->
+    <title>Title</title>
+
+    <!-- mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <!-- fonts -->
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+<form class="formWrapper">
+    <div class="formIntro">
+        <h2>Contact form</h2>
+        <h6>Please fill in your information and we'll be sending your order</h6>
+    </div>
+
+    <div class="formInputWrapper">
+        <input id="LastName" placeholder="second name" pattern="([a-zA-Z]{3,30}\s*)+[a-zA-Z]{3,30}" required/>
+        <label for="LastName" hidden></label>
+        <input id="FirstName" placeholder="first name" pattern="([a-zA-Z]{3,30}\s*)+[a-zA-Z]{3,30}" required/>
+        <label for="FirstName">Your Name</label>
+    </div>
+
+    <div class="formInputWrapper">
+        <input id="email" name="email" type="email" placeholder="your_mail@mail.com" required/>
+        <label for="email">Your email</label>
+    </div>
+
+    <div class="formInputWrapper">
+        <div class="smallScreen">
+            <input type="tel" id="telSmall" name="phone" placeholder="12-123-1234" pattern="[0-9]{2}-[0-9]{3}-[0-9]{4}"
+                   autocomplete="off" required>
+            <label for="telSmall">Phone*</label>
+        </div>
+        <div class="largeScreen">
+            <input id="telLarge1" name="telP1" type="tel" placeholder="0000" autocomplete="off" pattern="[0-9]{4}"
+                   required/>
+            <label for="telLarge1" hidden></label>
+            <input id="telLarge2" type="tel" placeholder="000" autocomplete="off" pattern="[0-9]{3}" required/>
+            <label for="telLarge2" hidden></label>
+            <input id="telLarge" name="tel" type="tel" placeholder="000" autocomplete="off" pattern="[0-9]{3}"
+                   required/>
+            <label for="telLarge">Phone*</label>
+        </div>
+    </div>
+    <div class="formInputWrapper">
+        <select name="messageSubject" id="messageSubject">
+            <option value="other">other</option>
+            <option value="question">question</option>
+            <option value="note">note</option>
+        </select>
+        <label for="messageSubject">Message subject*</label>
+    </div>
+
+    <div class="formInputWrapper <!--largeScreen-->">
+        <textarea id="message" name="message"></textarea>
+        <label for="message">Message*</label>
+    </div>
+
+    <div class="formInputWrapper btn">
+        <button id="btnSubmit" class="formSubmitBtn" type="submit" value="Submit">
+			<span class="flipper-object flipper-vertical">
+				<span class="panel front">Submit Form </span>
+			</span>
+        </button>
+        <label for="btnSubmit"></label>
+    </div>
+</form>
+</body>
+</html>

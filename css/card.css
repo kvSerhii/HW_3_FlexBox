@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, 'Helvetica', sans-serif;
+    background-color: #ccc;
+    min-width: 320px;
+    font-size: 16px;
+    color: white;
+    line-height: 1.5em;
+}
+
+@media screen and (max-width: 319px) {
+    .mainWrapContainer {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    body {
+        font-size: 10px;
+        line-height: 1em;
+    }
+
+    .mainWrapContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .cardContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        min-width: 100%;
+        height: 100px;
+        margin: 0 20px;
+    }
+
+    .cardContainer > div {
+        display: flex;
+        justify-content: space-around;
+        min-width: 30%;
+        background-color: DodgerBlue;
+        margin: 10px;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card h4 {
+        margin-top: 30px;
+    }
+
+    .bgFirst {
+        background-image: url(../backgrounds/first.png);
+        background-color: #fd8e95;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bgSecond {
+        background-image: url(../backgrounds/second.png);
+        background-color: #2696e2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bgThird {
+        background-image: url(../backgrounds/three.png);
+        background-color: #15d0bb;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    body {
+        min-width: 480px;
+        font-size: 9px;
+        line-height: 0.8em;
+    }
+
+    .cardContainer {
+        flex-direction: row;
+        background-color: #ddd;
+        height: 120px;
+    }
+
+    .cardContainer > div {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .card h4 {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 577px) {
+    body {
+        min-width: 570px;
+        font-size: 12px;
+        line-height: 1em;
+    }
+
+    .cardContainer {
+        height: 180px;
+    }
+
+    .card h4 {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        min-width: 768px;
+        font-size: 14px;
+        line-height: 1.2em;
+    }
+
+    .cardContainer {
+        height: 200px;
+    }
+
+    .card h4 {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        min-width: 1200px;
+        font-size: 18px;
+        line-height: 1.5em;
+    }
+
+    .cardContainer {
+        height: 250px;
+    }
+
+    .card h4 {
+        margin-top: 30px;
+    }
+}

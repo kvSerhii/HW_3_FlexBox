@@ -7,6 +7,24 @@ body {
     line-height: 1.5em;
 }
 
+.circle {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    right: 5px;
+    top: 250px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.cardContainer > div{
+    overflow: hidden;
+}
+.card {
+    overflow: hidden;
+}
+
 @media screen and (max-width: 319px) {
     .mainWrapContainer {
         display: none;
@@ -56,27 +74,19 @@ body {
     }
 
     .bgFirst {
-        background-image: url(../backgrounds/first.png);
-        background-color: #fd8e95;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        background: rgb(255, 199, 202);
+        background: linear-gradient(90deg, rgba(255, 199, 202, 1) 0%, rgba(255, 167, 172, 1) 40%, rgba(255, 65, 77, 1) 100%);
     }
 
     .bgSecond {
-        background-image: url(../backgrounds/second.png);
-        background-color: #2696e2;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        background: rgb(153, 205, 255);
+        background: linear-gradient(90deg, rgba(153, 205, 255, 1) 0%, rgba(30, 144, 255, 1) 53%, rgba(30, 144, 255, 1) 100%);
+
     }
 
     .bgThird {
-        background-image: url(../backgrounds/three.png);
-        background-color: #15d0bb;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        background: rgb(173, 255, 245);
+        background: linear-gradient(90deg, rgba(173, 255, 245, 1) 0%, rgba(29, 219, 198, 1) 40%, rgba(0, 163, 145, 1) 100%);
     }
 
     .header {

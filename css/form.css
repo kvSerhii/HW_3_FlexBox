@@ -11,10 +11,17 @@ body {
     max-height: 70vh;
 }
 
+.wrapAll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .formWrapper {
     margin: 10% 10px;
     padding: 10px;
     box-shadow: 1px 1px 15px 8px rgba(0, 0, 0, 0.75);
+    max-width: 1000px;
 }
 
 .formIntro h1 {
@@ -32,10 +39,28 @@ body {
     flex-direction: column-reverse;
 }
 
+.telBlock {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+
+.telBlock input {
+    max-width: 20%;
+}
+
+.telBlock label {
+    max-width: 20%;
+    padding-left: 0;
+
+}
+
 .formInputWrapper input {
     display: flex;
     flex-direction: column-reverse;
     margin: 5px 0;
+    padding: 5px;
     border-radius: 0;
     border: 0 solid rgba(255, 255, 255, 0);
 }
@@ -44,6 +69,7 @@ body {
     font-size: 15px;
     flex: 0 0 20%;
     margin: 5px 15px 5px 0;
+    width: 250px;
 }
 
 .formInputWrapper select {
@@ -59,7 +85,7 @@ body {
     border: 0 solid rgba(255, 255, 255, 0);
 }
 
-.btn{
+.btn {
     border-top: 1px solid white;
     margin-right: 0;
 }
@@ -70,12 +96,12 @@ body {
     color: white;
 }
 
-.formSubmitBtn{
-    background-color: rgba(0,0,0,0);
+.formSubmitBtn {
+    background-color: rgba(0, 0, 0, 0);
     border: 1px solid white;
 }
 
-.formSubmitBtn:hover{
+.formSubmitBtn:hover {
     background-color: white;
     color: #000;
 }
@@ -84,39 +110,38 @@ body {
     margin-top: 10px;
 }
 
-/* not displaying on screens with width less then 320px*/
-@media screen and (max-width: 319px) {
-    .formWrapper {
-        display: none;
-    }
-}
 
 @media screen and (min-width: 320px) {
-    .smallScreen {
+    .formWrapper {
+        max-width: 400px;
+    }
+    .smallTel {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .telBlock {
         display: flex;
         flex-direction: column-reverse;
+        justify-content: space-between;
+        margin-right: 0;
     }
 
-    .smallScreen input {
-        flex: 1 0 50%;
+    .telBlock input {
+        max-width: 30%;
     }
 
-    .smallScreen label {
-        margin-left: 0;
-    }
-
-    .largeScreen {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 550px) {
-    body {
-        background-color: yellow;
+    .telBlock label {
+        max-width: 100%;
     }
 }
 
 @media screen and (min-width: 768px) {
+    .formWrapper {
+        max-width: 1000px;
+    }
+
     .formInputWrapper {
         flex-direction: row-reverse;
         align-items: center;
@@ -128,24 +153,24 @@ body {
         margin-right: 15px;
     }
 
-    .smallScreen {
-        display: none;
-    }
-
-    .largeScreen {
+    .telBlock {
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-end;
-        flex: 1 1 100%;
     }
 
-    .largeScreen input {
+    .telLabel {
+        flex: 0 1 50%;
+    }
+
+    .smallTel {
         flex-grow: 1;
-        margin-right: 15px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
     }
 
-    .largeScreen input:first-child {
-        flex-shrink: 1;
+    .smallTel input {
+        flex: 0 1 50%;
         margin-right: 15px;
     }
 
@@ -159,20 +184,25 @@ body {
         margin-right: 15px;
     }
 
-    .btn{
+    .btn {
         margin-right: 15px;
     }
 }
 
-@media screen and (max-height: 600px) {
-    body {
-        line-height: 1.1em;
-        font-size: 10px;
-    }
+/*@media screen and (max-height: 600px) {*/
+/*    body {*/
+/*        line-height: 0.8em;*/
+/*        font-size: 8px;*/
+/*    }*/
 
-    .formWrapper {
-        margin: 7% 10px;
-        padding: 7px;
-        box-shadow: 1px 1px 15px 8px rgba(0, 0, 0, 0.75);
-    }
-}
+/*    .formWrapper {*/
+/*        margin: 7% 10px;*/
+/*        padding: 7px;*/
+/*        box-shadow: 1px 1px 15px 8px rgba(0, 0, 0, 0.75);*/
+/*        max-width: 360px;*/
+/*    }*/
+
+/*    .formWrapper label {*/
+/*        font-size: 12px;*/
+/*    }*/
+/*}*/
